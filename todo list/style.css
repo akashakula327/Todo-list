@@ -1,59 +1,42 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.bg-container {
     height: 100vh;
-    background-color: #fafafa;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
+    background-color: azure;
 }
-
-#todo-app {
-    max-width: 400px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-#task-input {
+.input-text {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 7px;
+    padding: 8px;
 }
 
-#add-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.line {
+    border: 1px solid black;
 }
 
-ul {
+.todo-item {
     list-style-type: none;
-    padding: 0;
+    margin-bottom: 20px;
 }
 
-li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+.checkbox {
+    width: 17px;
 }
 
-.task-text {
-    flex-grow: 1;
+.label {
+    padding-top: 6px;
 }
 
-.delete-button {
-    margin-left: 10px;
-    padding: 4px 8px;
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.label-container {
+    width: 90%; 
+    display: flex; 
+    align-items: center; 
+    background-color: rgb(222, 241, 255);
+    padding: 10px;
+    border: 1px solid black;
+    border-left: solid 5px red;
+    border-radius: 7px;
+}
+.checked {
+    text-decoration: line-through;
 }
