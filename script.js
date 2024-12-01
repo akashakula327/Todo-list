@@ -22,17 +22,29 @@ let todoList = getTodoListFromLocalStorage();
 
 let todosCount = todoList.length;
 
+
+function onDeleteTodo(todoId) {
+  let todoElement = document.getElementById(todoId);
+  todoItemsContainer.removeChild(todoElement);
+  
+  let deletedTodoItemIndex=todoList.findIndex(function(eachTodo) {
+    let eachTodoId="todo"+eachTodo.uniqueNo
+    if(eachTodoId===todoId) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  });
+
+  console.log(deletedTodoItemIndex);
+  todoList.splice(deletedTodoItemIndex,1);
+}
 function onTodoStatusChange(checkboxId, labelId) {
   let checkboxElement = document.getElementById(checkboxId);
   let labelElement = document.getElementById(labelId);
 
   labelElement.classList.toggle('checked');
-}
-
-function onDeleteTodo(todoId) {
-  let todoElement = document.getElementById(todoId);
-
-  todoItemsContainer.removeChild(todoElement);
 }
 
 function createAndAppendTodo(todo) {
